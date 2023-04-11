@@ -71,6 +71,8 @@
 
 * 如果使用我们提供的服务器进行开发的话，需要在服务器上用`ssh-keygen`生成key，然后将公钥上传到GitHub上，才能正常使用git协议访问`git@github.com:xxx/xxxx.git`。
 
+* 我们提供的服务器上已经安装了gtest，可以直接用，不需要同学们再另外安装。
+
 * 如果出现难以定位的内存访问报错（如segmentation fault, bad alloc)，可以使用[Address Sanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer)来帮助自己定位错误。 Asan也可以确保自己程序运行过程中没有内存泄露等问题。在wing中可以通过添加cmake选项`-DCMAKE_BUILD_TYPE=debug -DASAN=on`来启用asan。只在debug模式中生效。
 
 * Wing使用exception进行错误处理，因此在正常运行中也可能会throw exception，例如可能会`throw ParserException("Invalid expression.")`。在调试时如果IDE给all exceptions打了断点则可能会在这种正常exception处停下来，这并不意味着程序出了BUG，直接跳过即可。
