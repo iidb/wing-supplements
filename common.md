@@ -77,8 +77,6 @@
 
 * Wing使用exception进行错误处理，因此在正常运行中也可能会throw exception，例如可能会`throw ParserException("Invalid expression.")`。在调试时如果IDE给all exceptions打了断点则可能会在这种正常exception处停下来，这并不意味着程序出了BUG，直接跳过即可。
 
-* Autolab在正常使用时可能会出现500 internal error。如果遇到了请不用慌张，在handin history查看评测结果即可。
-
 * 最终得分在deadline+late submission过后才会显示在gradebook上。
 
 * autolab上due和last day to handin的区别：due之后仍然可以提交，但是会消耗late days，所有lab总共5天late days，用完late days后的提交每晚一天分数会-10%（按syllabus中的描述）。所以due之前已经满分的同学注意不要再次提交以免误用late days。
