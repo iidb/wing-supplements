@@ -76,3 +76,5 @@ Then press `F5` to start debugging.
 * If you encounter memory errors such as `segmentation fault` and `bad alloc`, you may try [Address Sanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer) (Asan) to help yourself to locate the cause of the error. Asan can also detect some other memory problems such as memory leaks. You may enable Asan by CMake options `-DCMAKE_BUILD_TYPE=debug -DASAN=on`. Note that Asan only takes effect in debug mode. Programs with Asan enabled are slower, therefore you may need to increase the timeout value in tests temporarily.
 
 * Submission after the due date will consume late days. If you already get full grades, don't submit after the due date, otherwise you will waste your late days.
+
+* `make: no rule to make target 'submit'` If you encounter this error when `make submit`, a possible reason is that you cloned the repo before I implemented `make submit` in CMakeLists.txt. `git fetch public && git merge public/main && cmake ..` can fix the issue in this case.
