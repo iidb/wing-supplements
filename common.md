@@ -71,7 +71,7 @@ Then press `F5` to start debugging.
 
 * If you use our public server, you should `ssh-keygen` on our server to generate a key pair and upload the public key to GitHub, so that you can access GitHub using git protocal like `git@github.com:xxx/xxxx.git`
 
-* We have already installed gtest on our public server.
+* We have already installed gtest and pre-commit on our public server.
 
 * If you encounter memory error such as `segmentation fault` and `bad alloc`, you may try [Address Sanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer) (Asan) to help yourself to locate the cause of the error. Asan can also detect some other memory problems such as memory leaks. You may enable Asan by CMake options `-DCMAKE_BUILD_TYPE=debug -DASAN=on`. Note that Asan only takes effect in debug mode. Programs with Asan enabled are slower, therefore you may need to increase the timeout value in tests temporarily.
 
