@@ -1,5 +1,9 @@
 # Common supplementary materials for all projects
 
+## Configure Visual Studio Code to use C++20
+
+If you are using Microsoft's C/C++ extension, you need to configure it to use C++20. The easiest way is to find `C_Cpp.default.cppStandard` in settings and change it to `c++20`.
+
 ## Debugging with Visual Studio Code
 
 Install Microsoft's extension `C/C++`. Create the directory `.vscode` under the root directory of the project. Add files listed below in `.vscode`:
